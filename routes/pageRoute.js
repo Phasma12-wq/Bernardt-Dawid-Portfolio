@@ -9,8 +9,7 @@ const homeMainInfo = {
 }
 
 const aboutInfo = {
-    location: "",
-    Phone: "",
+    Phone: "(+27)65 388 5534",
     Email: "",
     profileLinks: {
         LinkedIn: "",
@@ -20,7 +19,7 @@ const aboutInfo = {
 }
 
 const skills = {
-    Programming: ["C#", "Java"],
+    Programming: ["C#", "Java", "Object-Oriented Programming (OOP)"],
     WebProgramming: ["Javascript", "HTML", "CSS", "Node.js", "EJS"],
     Database: ["SQL", "Database Design"],
     Other: ["Team Collaboration", "Black-Box testing"]
@@ -28,9 +27,9 @@ const skills = {
 
 const education = {
     highSchool: {
-        name: "",
-        dateFrom: "",
-        dateTo: "",
+        name: "H/S Wonderboom South",
+        dateFrom: "01/02/2018",
+        dateTo: "01/12/2022",
         certificate: ""
     },
     college: {
@@ -56,8 +55,16 @@ router.get('/about', (req, res)=> {
     res.render('./pages/about', { page: 'about' });
 })
 
+router.get('/skills', (req, res)=> {
+    res.render('./pages/skills', { page: 'skills' });
+})
+
 router.get('/projects', (req, res)=> {
-    res.render('./pages/about', { page: 'about' });
+    res.render('./pages/projects', { page: 'projects' });
+})
+
+router.get('/get_CV', (req, res)=> {
+    
 })
 
 module.exports = router;

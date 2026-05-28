@@ -1,18 +1,10 @@
 var express = require('express');
 var path = require('path');
-const pageRoutes = require('./routes/pageRoute');
+const pageRouter = require('./routes/pageRoute');
 const bodyParser = require('body-parser'); 
 
 const app = express();
 const port = 3000;
-
-
-const loggingMiddleware = (res, req, next) => {
-    console.log(`[${new Date()}] ${req.method} ${req.url}`);
-    next();
-}
-
-app.use(loggingMiddleware)
 
 //Middleware to manage internal errors
 const errorHandler = (err, req, res, next) => {
