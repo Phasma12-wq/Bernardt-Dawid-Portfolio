@@ -1,9 +1,14 @@
+* {
+  overflow-x: hidden;
+  font-family:'Poppins', 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+}
+
 
 
 /* header section*/
 header {
-  background-color: turquoise;
-  width: 100%;
+  background-color: black;
+  width: 98%;
   padding: 20px;
 
   grid-template-areas: "title blank navbar" ;
@@ -18,6 +23,14 @@ header > .page-title {
   grid-area: title;
 }
 
+.page-title {
+  margin-left: 30px;
+
+  font-size: 2vw;
+
+  color: white;
+}
+
 header > .main-navbar {
   grid-area: navbar;
 }
@@ -27,19 +40,22 @@ header > .main-navbar {
 
   display: inline-flex;
 
-  background-color: gray;
+  background-color: transparent;
   
 }
 
 
-a {
+#link, 
+#home, 
+#about, 
+#CV {
   text-decoration: none;
 
   width: 140px;
   height: 30px;
   margin-left: 20px;
 
-  padding-top: 10px;
+  padding-top: 6px;
 
   text-align: center;
   
@@ -51,40 +67,105 @@ a {
   z-index: 1;
 
   border-radius: 50px;
+
+  color: white;
+
+  font-size: 1.5vw;
 }
 
-a:hover {
+#link:hover, 
+#home:hover, 
+#about:hover, 
+#CV:hover {
   color: black;
 
   background-color: rgb(75, 255, 75);
+
 }
 
-a::before {
+#link::before, 
+#home::before, 
+#about::before, 
+#CV::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
+
+  
   background-color: #00f81d;
-  transition: width 0.5s ease;
-  z-index: -1;
+  transition: width 0.3s ease;
+  z-index: -1;color: white;
 }
 
-a:hover::before {
+
+
+#link:hover::before, 
+#home:hover::before, 
+#about:hover::before, 
+#CV:hover::before {
   width: 100%; /* Expands the background to fill the button */
 }
 
-.main-introduction {
+.CV_link {
+  background-color: #00f81d;
+  color: rgb(0, 0, 0);
 
-  min-height: 300px;
+  font-size: 0.7vw;
+  padding: 5px;
+
+  margin-left: 10px;
+
+  border-radius: 50px;
 }
 
+.CV_link:hover {
+  color: rgb(11, 255, 52);
+
+  background-color: rgb(35, 120, 35);
+}
+
+.CV_link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #056711;
+  transition: width 0.3s ease;
+  z-index: -1;
+} 
+
+main {
+  flex: 1; /* pushes footer down */
+
+  background-image: url("/images/juanjo-jaramillo-mZnx9429i94-unsplash.jpg");
+  background-repeat: no-repeat
+}
+
+.main-introduction, .projects, .about {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+  margin: 0
+}
+
+
+/* Footer section */
 .site-footer {
   background-color: blue;
-  width: 100%;
-  height: 10%;
-  padding: 20px;
+  width: 98%;
+  height: 8%;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0
+
+
 }
 
 .footer-container {
@@ -108,14 +189,50 @@ a:hover::before {
   grid-area: about;
 }
 
-.footer-container > .footer-socials {
-  grid-area: social;
-}
-
 .footer-copyright {
   text-align: center;
 }
 
 .footer-info > div {
   display: flex;
+}
+
+
+.home-aside {
+  margin-left: 30px;
+  margin-top: 30px;
+
+  padding: 4%;
+
+  background-color: rgb(0 0 0 / 50%);
+  color: white;
+
+  width: 40%;
+  min-height: 200px;
+
+}
+
+.footer-picture {
+  text-align: center;
+}
+
+.about-aside {
+  margin-left: 30px;
+  margin-top: 30px;
+
+  padding: 4%;
+
+  background-color: rgb(0 0 0 / 50%);
+  color: white;
+
+  width: 10%;
+  min-height: 200px;
+}
+
+.about-aside > .about-nav {
+  display:inline;
+}
+
+.about-nav > nav {
+  width: 200px;
 }

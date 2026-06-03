@@ -4,8 +4,8 @@ const router = express.Router();
 const homeMainInfo = {
     name: "Bernardt Dawid van Greunen",
     degree: "Computing",
-    aspiringCareer: "Developer",
-    aboutfilelink: "/TextFiles/about.txt"
+    aspiringCareer: "Software Developer",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
 }
 
 const aboutInfo = {
@@ -47,20 +47,12 @@ const Projects = [
 ]
 
 router.get('/', (req, res) => {
-    res.render('./pages/home', { page: 'home' });
+    res.render('./pages/home', { page: 'home',  homeMainInfo });
 })
 
 
 router.get('/about', (req, res)=> {
     res.render('./pages/about', { page: 'about' });
-})
-
-router.get('/skills', (req, res)=> {
-    res.render('./pages/skills', { page: 'skills' });
-})
-
-router.get('/projects', (req, res)=> {
-    res.render('./pages/projects', { page: 'projects' });
 })
 
 router.get('/get_CV', (req, res)=> {
