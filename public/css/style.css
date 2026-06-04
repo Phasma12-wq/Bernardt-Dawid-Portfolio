@@ -422,6 +422,10 @@ button {
   margin-bottom: 20px;
 }
 
+.education-item > ul > li {
+   margin-bottom: 30px;
+}
+
 @media (max-width: 1800px) { 
 button {
   padding: 10px;

@@ -67,7 +67,9 @@ async function displayEducation() {
 
 
 
-        const ul = document.createElement("ul");
+
+        const li_degree = document.createElement("h3");
+        li_degree.innerText = `${value.degree}`;
 
         const shortFormat_from = new Intl.DateTimeFormat('en-US', {
             month: 'short',
@@ -81,13 +83,15 @@ async function displayEducation() {
             year: 'numeric'
         }).format(new Date(value.dateTo));
 
-        const li_dates = document.createElement("li")
+        const li_dates = document.createElement("h4");
         li_dates.innerText = `${shortFormat_from} - ${shortFormat_to}`
-        ul.appendChild(li_dates)
+
+
     
 
         newDiv.appendChild(h2);
-        newDiv.appendChild(ul);
+        newDiv.appendChild(li_degree);
+        newDiv.appendChild(li_dates);
         container.appendChild(newDiv);
 
         count+=1;

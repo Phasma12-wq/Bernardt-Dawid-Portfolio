@@ -23,12 +23,14 @@ const education = {
     "High School": {
         name: "H/S Wonderboom South",
         dateFrom: "02/01/2018",
-        dateTo: "12/01/2022"
+        dateTo: "12/01/2022",
+        degree: "National Senior Certificate"
     },
     College: {
         name: "Belgium Campus ITversity",
         dateFrom: "02/01/2023",
-        dateTo: "12/01/2026"
+        dateTo: "12/01/2026",
+        degree: "Bachelor of Computing"
     }
 }
 
