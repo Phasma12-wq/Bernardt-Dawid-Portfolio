@@ -55,6 +55,18 @@ router.get('/about', (req, res)=> {
     res.render('./pages/about', { page: 'about' });
 })
 
+router.get('/about/skills', (req, res)=> {
+    res.json(skills);
+})
+
+router.get('/about/education', (req, res)=> {
+    res.json(education);
+})
+
+router.get('/about/projects', (req, res)=> {
+    res.json(Projects);
+})
+
 router.get('/get_CV', (req, res)=> {
     
 })

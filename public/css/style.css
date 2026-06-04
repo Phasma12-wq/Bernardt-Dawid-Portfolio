@@ -146,11 +146,11 @@ main {
   background-repeat: no-repeat
 }
 
-.main-introduction, .projects, .about {
+.main-introduction, .about {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* full viewport height */
-  margin: 0
+  margin: 0;
 }
 
 
@@ -216,23 +216,62 @@ main {
   text-align: center;
 }
 
-.about-aside {
-  margin-left: 30px;
-  margin-top: 30px;
 
-  padding: 4%;
+/* About Section*/
+.about-nav {
+  margin-left: 30px;
+
+  margin-top: 10px;
+
 
   background-color: rgb(0 0 0 / 50%);
   color: white;
 
-  width: 10%;
+  width: 90%;
+  min-height: 50px;
+
+  place-items: center;
+
+  padding: 2%;
+}
+
+
+button {
+  font-size: 1vw;
+  padding: 10px;
+  min-width: 100px;
+
+  width: 250px;
+
+  margin-left: 12vw;
+}
+
+
+
+.about-section {
+  width: 94%;
   min-height: 200px;
+
+  margin-top: 50px;
+  margin-left: 30px;
+
+
+
+  margin-bottom: 100px;
+  background-color: rgb(0 0 0 / 50%);
+  color: white;
+
+  display: flex;
 }
 
-.about-aside > .about-nav {
-  display:inline;
-}
+/*placeholder style*/
+.skill-item {
+  min-width: 200px;
+  height: 200px;
 
-.about-nav > nav {
-  width: 200px;
+  background-color: red;
+
+  margin: 30px;
+
+  padding: 50px;
 }
