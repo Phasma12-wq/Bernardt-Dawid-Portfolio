@@ -82,3 +82,25 @@ document.querySelector('.Skills_btn').addEventListener("click", displaySkills);
 document.querySelector('.Education_btn').addEventListener("click", displayEducation);
 document.querySelector('.Projects_btn').addEventListener("click", displayProjects);
 */
+
+
+
+
+
+        
+function highlightNav(current_page) {
+    const home_link = document.getElementById("home");
+    const about_link = document.getElementById("about");
+
+    console.log(current_page)
+
+    if(current_page === "about") {
+        displaySkills();
+
+        about_link.style.border = "2px solid black";
+        about_link.style.backgroundColor = "#00f81d"
+    } else {
+        home_link.style.border = "2px solid black";
+        home_link.style.backgroundColor = "#00f81d"
+    }
+}

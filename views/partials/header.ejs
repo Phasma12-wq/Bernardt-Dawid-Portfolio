@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/CSS/style.css">
-    <script src="/Scripts/script.js"></script>
+    <script src="/scripts/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,25 +16,13 @@
             <a href="/about" class="<%= page === 'about' ? 'active' : '' %>" id="about">About</a>
             <a href=" https://raw.githubusercontent.com/Phasma12-wq/CV/main/CV.pdf" download="CV.pdf" % class="CV_link" id="CV">Download CV</a>
         </nav>
-
-        
     </header>
 
     <script>
-        const home_link = document.getElementById("home");
-        const about_link = document.getElementById("about");
-
-        const current_page = "<%= page %>";
-        
         document.addEventListener("DOMContentLoaded", () => {
-            if(current_page === "about") {
-                about_link.style.border = "2px solid black";
-                about_link.style.backgroundColor = "#00f81d"
-            } else {
-                home_link.style.border = "2px solid black";
-                home_link.style.backgroundColor = "#00f81d"
-            }
-        });
+        const current_page = "<%= page %>";
+        highlightNav(current_page); // call external function
+    });
     </script>
 </body>
 </html>
