@@ -44,8 +44,117 @@ header > .main-navbar {
   
 }
 
+#link {
+  color: black;
+  background-color: rgba(255, 255, 255, 0);
 
-#link, 
+  width: 170px;
+
+  text-decoration: none;
+
+  padding: 10px;
+  
+  height: 20px;
+
+  overflow-y: hidden;
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease;
+  z-index: 1;
+
+  border-left: 2px solid black;
+} 
+
+#link:hover {
+  color: white;
+
+  background-color: black;
+}
+
+#link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+
+  
+  background-color: #656565;
+  transition: width 0.3s ease;
+  z-index: -1;
+  color: white;
+}
+
+#link:hover::before {
+  width: 97%; /* Expands the background to fill the button */
+}
+
+.info-nav {
+  background-color: white;
+  height: 40px;
+
+  width: 50%;
+
+  display: flex;
+
+  overflow-y: hidden;
+
+  font-size: 1.5vw;
+  
+}
+
+
+.project_link {
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+
+  width: 170px;
+
+  text-decoration: none;
+
+  padding: 10px;
+  
+  height: 20px;
+
+  overflow-y: hidden;
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 1s ease;
+  z-index: 1;
+
+  border-left: 2px solid black;
+} 
+
+.project_link:hover {
+  color: rgb(255, 255, 255);
+
+  background-color: #bababa;
+}
+
+.project_link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+
+  
+  background-color: black;
+  transition: width 0.5s ease;
+  z-index: -1;
+  color: rgb(159, 154, 154);
+}
+
+.project_link:hover::before {
+  width: 94%; /* Expands the background to fill the button */
+}
+
 #home, 
 #about, 
 #CV {
@@ -73,17 +182,15 @@ header > .main-navbar {
   font-size: 1.5vw;
 }
 
-#link:hover, 
 #home:hover, 
 #about:hover, 
 #CV:hover {
   color: black;
 
-  background-color: rgb(75, 255, 75);
+  background-color: rgb(218, 218, 218);
 
 }
-
-#link::before, 
+ 
 #home::before, 
 #about::before, 
 #CV::before {
@@ -95,14 +202,12 @@ header > .main-navbar {
   height: 100%;
 
   
-  background-color: #00f81d;
+  background-color: #8f8f8f;
   transition: width 0.3s ease;
   z-index: -1;color: white;
 }
 
-
-
-#link:hover::before, 
+ 
 #home:hover::before, 
 #about:hover::before, 
 #CV:hover::before {
@@ -110,21 +215,19 @@ header > .main-navbar {
 }
 
 .CV_link {
-  background-color: #00f81d;
+  background-color: #828282;
   color: rgb(0, 0, 0);
 
   font-size: 0.7vw;
   padding: 5px;
 
-  margin-left: 10px;
-
   border-radius: 50px;
 }
 
 .CV_link:hover {
-  color: rgb(11, 255, 52);
+  color: rgb(159, 159, 159);
 
-  background-color: rgb(35, 120, 35);
+  background-color: rgb(160, 160, 160);
 }
 
 .CV_link::before {
@@ -134,16 +237,19 @@ header > .main-navbar {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #056711;
+  background-color: #808080;
   transition: width 0.3s ease;
   z-index: -1;
 } 
+
 
 main {
   flex: 1; /* pushes footer down */
 
   background-image: url("/images/juanjo-jaramillo-mZnx9429i94-unsplash.jpg");
   background-repeat: no-repeat;
+
+  background-image: linear-gradient(rgba(35, 35, 35, 0.6), rgba(131, 131, 131, 0.6)), url('/images/juanjo-jaramillo-mZnx9429i94-unsplash.jpg');
   background-size: cover;      /* fills entire element */
   background-position: center;
 }
@@ -153,34 +259,35 @@ main {
   flex-direction: column;
   min-height: 100vh; /* full viewport height */
   margin: 0;
+
+
 }
 
 
 /* Footer section */
 .site-footer {
   background-color: blue;
-  width: 98%;
-  height: 8%;
-  padding: 1rem;
+  width: 100%;
+  height: 4%;
 
   display: flex;
   flex-direction: column;
-  margin: 0
+  margin: 0;
 
-
+  background-color: black;
 }
 
 .footer-container {
-  background-color: grey;
-  width: 95%;
+  background-color: rgb(150, 237, 255);
+  width: 50%;
   height: 20%;
   padding: 20px;
   
 
-  grid-template-areas: "about blank features" ;
 
-  display: grid;
-  grid-template-columns: 30% 10% 40%;
+  display: flex;
+
+  margin: 10px auto;
 }
 
 .footer-container > .footer-features {
@@ -193,10 +300,12 @@ main {
 
 .footer-copyright {
   text-align: center;
+  color: white;
 }
 
 .footer-info > div {
   display: flex;
+  
 }
 
 
@@ -205,6 +314,8 @@ main {
   margin-top: 30px;
 
   padding: 4%;
+
+  display: flexbox;
 
   background-color: rgb(0 0 0 / 50%);
   color: white;
@@ -216,36 +327,54 @@ main {
 
 .footer-picture {
   text-align: center;
+  color: white;
 }
 
 
 /* About Section*/
 .about-nav {
-  margin-left: 30px;
-
-  margin-top: 10px;
+  margin: 0 auto;
 
 
   background-color: rgb(0 0 0 / 50%);
   color: white;
 
-  width: 90%;
+  width: 60%;
   min-height: 50px;
 
   place-items: center;
 
   padding: 2%;
+
+  display: flex;
+
+  gap: 60px;
+}
+
+.socials {
+  margin: 10px auto;
+
+  font-size: 4vw;
+
+  display: flex;
+
+  width: 60%;
+
+  color: black;
+}
+
+.socials > li {
+  color: black;
 }
 
 
 button {
-  font-size: 1vw;
+  font-size: 2vw;
   padding: 10px;
   min-width: 100px;
 
-  width: 250px;
+  width: 350px;
 
-  margin-left: 12vw;
 
   background-color: transparent;
 
@@ -264,7 +393,7 @@ button {
 
 
   margin-bottom: 100px;
-  background-color: rgb(0 0 0 / 50%);
+  background-color: rgba(0, 0, 0, 0.746);
   color: white;  padding-left: 10px;
   padding-top: 10px;
 
@@ -274,17 +403,190 @@ button {
 }
 
 /*placeholder style*/
-.skill-item {
+.skill-item, .education-item, .project-item {
   min-width: 200px;
-  height: 200px;
+  min-height: 250px;
 
-  background-color: red;
+  background-color: rgba(112, 112, 112, 0.801);
+
+  display: flexbox;
+
+  row-gap: 100px;
 
   margin: 30px;
 
   padding: 50px;
 }
 
+.project-item > div {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1800px) { 
+button {
+  padding: 10px;
+
+  width: 350px;
+
+
+  background-color: transparent;
+
+  color: white;
+
+  font-size: 2vw;
+}
+
+.about-nav {
+  margin: 0 auto;
+
+
+  background-color: rgb(0 0 0 / 50%);
+  color: white;
+
+  width: 60%;
+  min-height: 50px;
+
+  place-items: center;
+
+  padding: 2%;
+
+  display: flex;
+
+  gap: 50px;
+}
+}
+
+@media (max-width: 1600px) { 
+button {
+  font-size: 2vw;
+  padding: 10px;
+
+  width: 250px;
+
+
+  background-color: transparent;
+
+  color: white;
+}
+.about-nav {
+  margin: 0 auto;
+
+
+  background-color: rgb(0 0 0 / 50%);
+  color: white;
+
+  width: 60%;
+  min-height: 50px;
+
+  place-items: center;
+
+  padding: 2%;
+
+  display: flex;
+
+  gap: 100px;
+}
+
+}
+
+@media (max-width: 1440px) { 
+  button {
+  font-size: 2vw;
+  padding: 10px;
+
+  width: 250px;
+
+
+  background-color: transparent;
+
+  color: white;
+}
+
+.about-nav {
+  margin: 0 auto;
+
+
+  background-color: rgb(0 0 0 / 50%);
+  color: white;
+
+  width: 60%;
+  min-height: 50px;
+
+  place-items: center;
+
+  padding: 2%;
+
+  display: flex;
+
+  gap: 60px;
+}
+}
+
+@media (max-width: 1270px) { 
+button {
+  padding: 10px;
+
+  width: 200px;
+
+  font-size: 2vw;
+
+
+  background-color: transparent;
+
+  color: white;
+}
+
+.about-nav {
+  margin: 0 auto;
+
+
+  background-color: rgb(0 0 0 / 50%);
+  color: white;
+
+  width: 60%;
+  min-height: 50px;
+
+  place-items: center;
+
+  padding: 2%;
+
+  display: flex;
+
+  gap: 80px;
+}
+}
+
+@media (max-width: 1200px) { 
+button {
+  padding: 10px;
+
+  width: 200px;
+
+
+  background-color: transparent;
+
+  color: white;
+}
+
+.about-nav {
+  margin: 0 auto;
+
+
+  background-color: rgb(0 0 0 / 50%);
+  color: white;
+
+  width: 60%;
+  min-height: 50px;
+
+  place-items: center;
+
+  padding: 2%;
+
+  display: flex;
+
+  gap: 60px;
+}
+}
 
 /* Mobile Phone Preset*/
 @media (max-width: 1060px) {
@@ -297,12 +599,16 @@ button {
   width: 98%;
   padding: 20px;
 
-  grid-template-areas: "title blank navbar" ;
+  grid-template-areas: "title title title" 
+                      "navbar navbar navbar";
 
   display: grid;
-  grid-template-columns: 20% 5% 70%;
+  grid-template-columns: 10% 5% 70%;
+  grid-template-rows: 50% 5% 50%; 
 
-  min-height: 50px;
+  min-height: 100px;
+
+  overflow: hidden;
   }
 
 header > .page-title {
@@ -312,7 +618,11 @@ header > .page-title {
 .page-title {
   margin-left: 30px;
 
-  font-size: 2vw;
+  font-size: 3vw;
+
+  text-align: center;
+
+  overflow: hidden;
 
   color: white;
 }
@@ -322,77 +632,41 @@ header > .main-navbar {
 }
 
 .main-navbar {
-  padding: 20px;
-
-  display: inline-flex;
-
   background-color: transparent;
+
+  padding: 20px;
   
+
+  height: fit-content;
+
+  margin: 0 auto;
 }
 
-#link, 
+#link {
+  color: black;
+  background-color: white;
+
+  width: 170px;
+
+  text-decoration: none;
+
+  font-size: 2vw;
+
+  overflow: hidden;
+} 
+
 #home, 
 #about, 
 #CV {
   text-decoration: none;
 
-  width: 140px;
-  height: 50px;
+  width: 150px;
+  height: 60px;
   margin-left: 20px;
-
-  padding-top: 6px;
-
-  text-align: center;
-  
-
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.5s ease;
-  z-index: 1;
-
-  border-radius: 50px;
-
-  color: white;
-
   font-size: 3vw;
 }
 
-#link:hover, 
-#home:hover, 
-#about:hover, 
-#CV:hover {
-  color: black;
 
-  background-color: rgb(75, 255, 75);
-
-}
-
-#link::before, 
-#home::before, 
-#about::before, 
-#CV::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-
-  
-  background-color: #00f81d;
-  transition: width 0.3s ease;
-  z-index: -1;color: white;
-}
-
-
-
-#link:hover::before, 
-#home:hover::before, 
-#about:hover::before, 
-#CV:hover::before {
-  width: 100%; /* Expands the background to fill the button */
-}
 
 button {
   font-size: 3.5vw;
@@ -424,6 +698,21 @@ button {
   
 }
 
+.footer-container {
+  background-color: white;
+  width: 100%;
+  height: 20%;
+  padding: 20px;
+  
+
+  grid-template-areas: "about blank features" ;
+
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+
+  font-size: 2vw;
+}
+
 .about-section {
   width: 90%;
   min-height: 200px;
@@ -442,6 +731,18 @@ button {
 
   overflow-x: auto;
 }
+.socials {
+  margin: 10px auto;
+
+  display: flex;
+
+  gap: 10px;
+
+  font-size: 6vw;
+
+  width: 70%;
+  color: black;
+}
 }
 
 @media (max-width: 560px)  {
@@ -449,14 +750,19 @@ button {
   header {
   background-color: black;
   width: 98%;
-  padding: 20px;
+  grid-template-areas: "title title title" 
+                      "navbar navbar navbar";
 
-  grid-template-areas: "title blank navbar" ;
 
   display: grid;
-  grid-template-columns: 30% 0% 70%;
+  grid-template-columns: 10% 5% 80%;
+  grid-template-rows: 50% 5% 50%; 
 
-  min-height: 50px;
+    overflow: hidden;
+
+  min-height: 100px;
+
+  padding-left: 0px;
   }
 
 header > .page-title {
@@ -481,7 +787,8 @@ header > .main-navbar {
   display: inline-flex;
 
   background-color: transparent;
-  
+
+  margin: 0 0;
 }
   
 
@@ -508,31 +815,91 @@ header > .main-navbar {
   overflow-x: auto;
 }
 
-#link, 
+#link {
+  color: black;
+  background-color: white;
+
+  width: 170px;
+
+  text-decoration: none;
+
+  font-size: 4.5vw;
+
+  overflow: hidden;
+}
+
+
+#home, 
+#about, 
+#CV {
+  text-decoration: none;
+
+  width: 300px;
+  height: 60px;
+  margin-left: 10px;
+
+  font-size: 5vw;
+}
+
+.home-aside {
+  margin-left: 30px;
+  margin-top: 30px;
+
+  padding: 4%;
+
+  background-color: #00000080;
+  color: white;
+
+  width: 80%;
+  min-height: 200px;
+
+  margin-bottom: 20px;
+
+}
+
+.footer-container {
+  background-color: white;
+  width: 100%;
+  height: 15%;
+  padding: 20px;
+  
+
+  grid-template-areas: "about blank features" ;
+
+  display: grid;
+  grid-template-columns: 40% 10% 40%;
+
+  font-size: 3vw;
+}
+}
+
+@media (max-width: 380px) {
+  button {
+    min-width: 50px;
+  }
+
 #home, 
 #about, 
 #CV {
   text-decoration: none;
 
   width: 200px;
-  height: 50px;
-  margin-left: 20px;
+  height: 60px;
 
-  padding-top: 30px;
-
-  text-align: center;
+  font-size: 4vw;
+}
+.footer-container {
+  background-color: white;
+  width: 100%;
+  height: 15%;
+  padding: 20px;
   
 
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.5s ease;
-  z-index: 1;
+  grid-template-areas: "about blank features" ;
 
-  border-radius: 50px;
-
-  color: white;
+  display: grid;
+  grid-template-columns: 40% 5% 40%;
 
   font-size: 3vw;
 }
-}
+}  
