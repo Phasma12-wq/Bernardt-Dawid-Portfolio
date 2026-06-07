@@ -135,7 +135,7 @@ async function displayProjects() {
 
 async function getData(path) {
   try {
-    const response = await fetch(`https://portfolio-website-boue.onrender.com/about/${path}`);
+    const response = await fetch(`http://localhost:3000/about/${path}`);
     if (!response.ok) throw new Error("Network error: " + response.status);
     return await response.json();
   } catch (error) {
