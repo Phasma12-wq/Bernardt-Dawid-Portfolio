@@ -36,7 +36,7 @@ const education = {
 
 const Projects = [
     {name: "StreetSync - Community Portal", stack: ["EJS", "Javascript", "CSS", "Express.js"], description: "We utilized what we learned from Web Programming in our 3rd year to develop a website that would run via node.js, in order to implement dynamic rendering via EJS.", link: "https://github.com/Phasma12-wq/WPR381_Group_Assignment.git"},
-    {name: "BC Wellness Web App", stack: ["JavaDB", "Java", "Javascript", "CSS"], description: "We developed a Java desktop application to manage student wellness services at Belgium Campus. It was developed using Java Swing, and JavaDB, and it was designed using OOP principles and MVC architecture. The system provides counselors, students, and administrators with tools to manage appointments, counselor details, and student feedback.", link: "https://github.com/Phasma12-wq/WPR381_Group_Assignment.git"},
+    {name: "BC Wellness Web App", stack: ["JavaDB", "Java", "Javascript", "CSS"], description: "We developed a Java desktop application to manage student wellness services at Belgium Campus. It was developed using Java Swing, and JavaDB, and it was designed using OOP principles and MVC architecture. The system provides counselors, students, and administrators with tools to manage appointments, counselor details, and student feedback.", link: "https://github.com/EJ-Engelbrecht/PRG381-BC-Student-Wellness.git"},
     {name: "Project CampusLearn", stack: ["EJS", "Javascript", "CSS", "Express.js"], description: "For our software engineering assignment, we developed a communication platform for Belgium Campus students, that could be navigated via a gpt chatbot that would perform basic function calling.", link: "https://github.com/DSReaper/Project_CampusLearn.git"}
 ]
 
