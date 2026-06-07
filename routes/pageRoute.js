@@ -61,8 +61,8 @@ router.get('/about/projects', (req, res)=> {
     res.json(Projects);
 })
 
-router.get('/get_CV', (req, res)=> {
-    
-})
+router.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 
 module.exports = router;
