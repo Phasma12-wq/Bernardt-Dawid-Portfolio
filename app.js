@@ -4,7 +4,7 @@ const pageRouter = require('./routes/pageRoute');
 const bodyParser = require('body-parser'); 
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 //Middleware to manage internal errors
 const errorHandler = (err, req, res, next) => {
